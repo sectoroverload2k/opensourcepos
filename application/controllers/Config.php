@@ -905,7 +905,7 @@ class Config extends Secure_Controller
 			$result = FALSE;
 
 			// Chmod the file
-			@chmod($config_path, 0777);
+			@chmod($config_path, 0700);
 
 			// Verify file permissions
 			if(is_writable($config_path))
@@ -920,7 +920,7 @@ class Config extends Secure_Controller
 			}
 
 			// Chmod the file
-			@chmod($config_path, 0444);
+			@chmod($config_path, 0400);
 
 			return $result;
 		}
